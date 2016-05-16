@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  vertical-align: baseline; }
+
+.carousel {
+  position: relative;
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  /* Safari 6.1+ */
+  flex-wrap: wrap;
+  margin: 100px;
+  border: 0px solid; }
+  .carousel .item {
+    -webkit-flex-basis: 25%;
+    /* Safari 6.1+ */
+    flex-basis: 20%;
+    height: 300px;
+    overflow: hidden; }
+    .carousel .item img {
+      max-width: 100%;
+      height: auto; }
+
+.bubble-fog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center; }
+
+.bubble-box {
+  position: relative;
+  display: flex;
+  height: 90%;
+  justify-content: center;
+  align-items: center; }
+  .bubble-box img {
+    max-width: 100%;
+    max-height: 100%; }
+
+.bubble-next,
+.bubble-prev {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  cursor: default; }
+  .bubble-next:hover,
+  .bubble-prev:hover {
+    background: rgba(50, 50, 50, 0.5); }
+    .bubble-next:hover:before,
+    .bubble-prev:hover:before {
+      display: block; }
+  .bubble-next.active:hover,
+  .bubble-prev.active:hover {
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer; }
+    .bubble-next.active:hover:before,
+    .bubble-prev.active:hover:before {
+      color: #FFF; }
+  .bubble-next:before,
+  .bubble-prev:before {
+    content: '>';
+    position: absolute;
+    top: 50%;
+    display: none;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #555; }
+
+.bubble-prev {
+  right: auto;
+  left: 0; }
+  .bubble-prev:before {
+    content: '<'; }

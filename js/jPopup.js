@@ -46,7 +46,6 @@
 		function showPopupImg(target) {
 
 			bFog.show(function(){
-				$(this).css("display","flex");
 				bBox.append('<img src="'+target.href+'">').show();
 
 				if ($imageLinks.length > 1) {
@@ -57,7 +56,6 @@
 		function showPopup(target) {
 			bFog.show(function(){
 				$prevParent=$(target.hash).parent();
-				$(this).css("display","flex");
 				bBox.append($(target.hash)).show();
 			});
 		};

@@ -32,12 +32,11 @@
   bottom: 0;
   left: 0;
   display: none;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center; }
+  background-color: rgba(0, 0, 0, 0.8); }
 
 .bubble-box {
   position: relative;
+  top: 5%;
   display: flex;
   height: 90%;
   justify-content: center;
